@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam Njeh | Cybersecurity Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <canvas id="matrix-bg"></canvas>
+
+    <div class="scanline"></div>
+
+    <nav id="navbar">
+        <div class="nav-logo glitch" data-text="AΔM">AΔM</div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">~/home</a></li>
+            <li><a href="#about" class="nav-link">~/about</a></li>
+            <li><a href="#skills" class="nav-link">~/skills</a></li>
+            <li><a href="#experience" class="nav-link">~/xp</a></li>
+            <li><a href="#projects" class="nav-link">~/projects</a></li>
+            <li><a href="#education" class="nav-link">~/edu</a></li>
+            <li><a href="#contact" class="nav-link">~/contact</a></li>
+        </ul>
+        <div class="nav-hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-terminal">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="terminal-title">adam@kali:~</span>
+                </div>
+                <div class="terminal-body">
+                    <p class="terminal-line"><span class="prompt">$</span> whoami</p>
+                    <h1 class="glitch-hero" data-text="Adam Njeh">Adam Njeh</h1>
+                    <p class="terminal-line"><span class="prompt">$</span> cat role.txt</p>
+                    <p class="hero-subtitle typing" id="typing-text"></p>
+                    <p class="terminal-line"><span class="prompt">$</span> cat bio.txt</p>
+                    <p class="hero-bio">> Pirate of the digital seas, hunting vulns across the Grand Line!</p>
+                    <p class="terminal-line"><span class="prompt">$</span> <span class="cursor">_</span></p>
+                </div>
+            </div>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary"><i class="fas fa-terminal"></i> View Projects</a>
+                <a href="#contact" class="btn btn-outline"><i class="fas fa-satellite-dish"></i> Contact Me</a>
+            </div>
+            <div class="hero-badges">
+                <div class="badge"><i class="fas fa-shield-halved"></i> Top 5% TryHackMe</div>
+                <div class="badge"><i class="fas fa-graduation-cap"></i> Telecom SudParis</div>
+                <div class="badge"><i class="fas fa-language"></i> TOEIC 920</div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <p>scroll_down</p>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title"><span class="title-bracket">[</span> About Me <span class="title-bracket">]</span></h2>
+            <div class="about-grid">
+                <div class="about-avatar">
+                    <div class="avatar-frame">
+                        <img src="https://avatars.githubusercontent.com/u/65918747?v=4" alt="Adam Njeh" class="avatar-img">
+                        <div class="avatar-glitch"></div>
+                    </div>
+                    <div class="avatar-status">
+                        <span class="status-dot"></span> Available for alternance
+                    </div>
+                </div>
+                <div class="about-text">
+                    <div class="about-card">
+                        <p>Engineering student at <span class="highlight">Telecom SudParis</span>, specializing in systems security, network defense, and threat analysis. My hands-on experience spans <span class="highlight">static binary analysis</span> (PE headers, entropy, IOC), <span class="highlight">SAST pipelines</span> (taint analysis, CWE detection), and <span class="highlight">threat intelligence</span> (darkweb scraping, ransomware tracking).</p>
+                        <p>International background: Tunisia to France, ranked <span class="highlight">top 5% on TryHackMe</span>. Passionate about offensive security, malware analysis, and building tools that make the digital world safer.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="9">0</span>
+                            <span class="stat-label">GitHub Repos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="5">0</span>
+                            <span class="stat-label">% TryHackMe</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="920">0</span>
+                            <span class="stat-label">TOEIC Score</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="3">0</span>
+                            <span class="stat-label">Languages</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title"><span class="title-bracket">[</span> Skills <span class="title-bracket">]</span></h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">PHP</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fas fa-bug"></i></div>
+                    <h3>Threat Analysis & OSINT</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">VirusTotal API</span>
+                        <span class="skill-tag">PE Parsing</span>
+                        <span class="skill-tag">Entropy Analysis</span>
+                        <span class="skill-tag">Magic Bytes</span>
+                        <span class="skill-tag">Web Scraping</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fas fa-shield-halved"></i></div>
+                    <h3>AppSec & SAST</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Taint Analysis</span>
+                        <span class="skill-tag">Semgrep</span>
+                        <span class="skill-tag">YARA Rules</span>
+                        <span class="skill-tag">Burp Suite</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Network & Pentest</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Wireshark</span>
+                        <span class="skill-tag">Nmap</span>
+                        <span class="skill-tag">Metasploit</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title"><span class="title-bracket">[</span> Experience <span class="title-bracket">]</span></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Cybersecurity Intern</h3>
+                            <span class="timeline-company">CyberFort Tech.</span>
+                            <span class="timeline-date">Jul 2025 - Aug 2025 | Remote, India</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Built a Python CLI tool for static file analysis: hash computation, VirusTotal API comparison, suspicious string extraction, PE import analysis, and magic byte detection.</li>
+                            <li>Implemented per-section entropy calculation for packing/encryption detection, completing a full IOC classification pipeline without execution.</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">VirusTotal</span>
+                            <span class="tag">PE Analysis</span>
+                            <span class="tag">Malware</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Observation Intern</h3>
+                            <span class="timeline-company">Tunisie Telecom</span>
+                            <span class="timeline-date">Jul 2024 - Aug 2024 | Sfax, Tunisia</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Observed regional network infrastructure of a national operator: equipment, fiber optics, and network security practices in a real-world operator environment.</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Network Infrastructure</span>
+                            <span class="tag">Fiber Optics</span>
+                            <span class="tag">Telecom</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title"><span class="title-bracket">[</span> Projects <span class="title-bracket">]</span></h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <i class="fas fa-skull-crossbones project-icon"></i>
+                        <div class="project-links">
+                            <a href="https://github.com/adamnjeh" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Threat Intel - Ransomware Tracker</h3>
+                    <p class="project-desc">Automated darkweb (.onion) scraping to collect ransomware compromise announcements. Structured data into analytical database: victim, gang, date, ransom amount, stolen data type, Bitcoin address, attack strategy.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Tor</span>
+                        <span class="tag">OSINT</span>
+                        <span class="tag">Darkweb</span>
+                    </div>
+                    <div class="project-date">Feb 2026 - May 2026 | Telecom SudParis</div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <i class="fas fa-microchip project-icon"></i>
+                        <div class="project-links">
+                            <a href="https://github.com/adamnjeh/enhanced-miniJAVA-compiler" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">MiniJava Compiler + SAST Extension</h3>
+                    <p class="project-desc">Full MiniJava compiler (lexical, syntactic, semantic analysis, IR & MIPS generation). Extended with a two-pass SAST pipeline: taint analysis (CWE-89/77/79), pattern detector (CWE-190/835), Semgrep/YARA rule engine, MIPS hardening, and grammar fuzzer.</p>
+                    <div class="project-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">SAST</span>
+                        <span class="tag">Compiler</span>
+                        <span class="tag">Security</span>
+                    </div>
+                    <div class="project-date">Dec 2025 - Mar 2026 | Telecom SudParis</div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <i class="fas fa-globe project-icon"></i>
+                        <div class="project-links">
+                            <a href="https://github.com/adamnjeh" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">KaizoKage - Collection Management App</h3>
+                    <p class="project-desc">Full-stack web application with authentication, role management (ROLE_USER / ROLE_ADMIN), owner-based access control, and CSRF protection.</p>
+                    <div class="project-tags">
+                        <span class="tag">PHP</span>
+                        <span class="tag">Symfony</span>
+                        <span class="tag">Auth</span>
+                        <span class="tag">RBAC</span>
+                    </div>
+                    <div class="project-date">Sep 2025 - Dec 2025 | Telecom SudParis</div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <i class="fas fa-virus project-icon"></i>
+                        <div class="project-links">
+                            <a href="https://github.com/adamnjeh/Malware_Analysis" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Malware Analysis</h3>
+                    <p class="project-desc">Python-based malware analysis toolkit for static examination of suspicious files and binaries.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Malware</span>
+                        <span class="tag">Analysis</span>
+                    </div>
+                    <div class="project-date">GitHub Repository</div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <i class="fas fa-flag project-icon"></i>
+                        <div class="project-links">
+                            <a href="https://github.com/adamnjeh/Overthewire-Writeups" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">OverTheWire Writeups</h3>
+                    <p class="project-desc">Detailed writeups and solutions for OverTheWire security wargames, documenting methodologies and techniques.</p>
+                    <div class="project-tags">
+                        <span class="tag">CTF</span>
+                        <span class="tag">Wargames</span>
+                        <span class="tag">Security</span>
+                    </div>
+                    <div class="project-date">GitHub Repository</div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <i class="fas fa-gamepad project-icon"></i>
+                        <div class="project-links">
+                            <a href="https://github.com/adamnjeh/Tetris-Unity" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Tetris - Unity</h3>
+                    <p class="project-desc">Classic Tetris game built with Unity engine, showcasing game development skills and C# programming.</p>
+                    <div class="project-tags">
+                        <span class="tag">C#</span>
+                        <span class="tag">Unity</span>
+                        <span class="tag">Game Dev</span>
+                    </div>
+                    <div class="project-date">GitHub Repository</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title"><span class="title-bracket">[</span> Education <span class="title-bracket">]</span></h2>
+            <div class="education-grid">
+                <div class="edu-card">
+                    <div class="edu-icon"><i class="fas fa-university"></i></div>
+                    <h3>Telecom SudParis</h3>
+                    <p class="edu-degree">Engineering Degree - Computer Science & Digital Systems</p>
+                    <p class="edu-date">2025 - 2027 | Ile-de-France, France</p>
+                    <p class="edu-detail">System design, networks, software development with application security focus.</p>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-icon"><i class="fas fa-satellite-dish"></i></div>
+                    <h3>Sup'Com - Tunis</h3>
+                    <p class="edu-degree">Engineering Cycle - ICT</p>
+                    <p class="edu-date">2023 - 2025 | Ariana, Tunis, Tunisia</p>
+                    <p class="edu-detail">Networks & telecommunications, software development with network security orientation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS / BADGES -->
+    <section id="badges" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title"><span class="title-bracket">[</span> Achievements <span class="title-bracket">]</span></h2>
+            <div class="badges-grid">
+                <div class="badge-card">
+                    <i class="fas fa-crosshairs badge-icon"></i>
+                    <h4>TryHackMe Top 5%</h4>
+                    <p>Global ranking</p>
+                </div>
+                <div class="badge-card">
+                    <i class="fas fa-magnifying-glass badge-icon"></i>
+                    <h4>OhSINT</h4>
+                    <p>OSINT - Top 6.1%</p>
+                </div>
+                <div class="badge-card">
+                    <i class="fas fa-network-wired badge-icon"></i>
+                    <h4>Wireshark</h4>
+                    <p>Network Analysis - Top 4%</p>
+                </div>
+                <div class="badge-card">
+                    <i class="fas fa-ethernet badge-icon"></i>
+                    <h4>Networking Nerd</h4>
+                    <p>TryHackMe Badge</p>
+                </div>
+                <div class="badge-card">
+                    <i class="fas fa-user-shield badge-icon"></i>
+                    <h4>Security Awareness</h4>
+                    <p>Top 4.4%</p>
+                </div>
+                <div class="badge-card">
+                    <i class="fas fa-code-pull-request badge-icon"></i>
+                    <h4>Pull Shark</h4>
+                    <p>GitHub Achievement</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title"><span class="title-bracket">[</span> Contact <span class="title-bracket">]</span></h2>
+            <div class="contact-grid">
+                <div class="contact-terminal">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">contact@adam:~</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p class="terminal-line"><span class="prompt">$</span> cat contact_info.json</p>
+                        <pre class="contact-json">{
+  "email": "njehadam.an@gmail.com",
+  "phone": "+33 7 46 51 89 44",
+  "location": "Ile-de-France, France",
+  "status": "Seeking 1-year cybersecurity alternance"
+}</pre>
+                    </div>
+                </div>
+                <div class="contact-links">
+                    <a href="https://github.com/adamnjeh" target="_blank" class="contact-link-card">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                        <span class="link-arrow">-></span>
+                    </a>
+                    <a href="https://linkedin.com/in/Adam-Njeh" target="_blank" class="contact-link-card">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                        <span class="link-arrow">-></span>
+                    </a>
+                    <a href="mailto:njehadam.an@gmail.com" class="contact-link-card">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                        <span class="link-arrow">-></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="footer-text">&copy; 2026 Adam Njeh | Built with <span class="highlight">&lt;/code&gt;</span> and <span class="highlight">caffeine</span></p>
+            <div class="footer-links">
+                <a href="https://github.com/adamnjeh" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/Adam-Njeh" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
