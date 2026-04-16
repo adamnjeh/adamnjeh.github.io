@@ -38,8 +38,35 @@ window.addEventListener('resize', () => {
     drops = Array(columns).fill(1);
 });
 
-// ===== TYPING EFFECT =====
-const typingTexts = [
+// ===== THEME TOGGLE =====
+const themeToggle = document.getElementById('theme-toggle');
+const themeLabel = themeToggle.querySelector('.control-label');
+
+if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light-mode');
+}
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    const isLight = document.body.classList.contains('light-mode');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    updateThemeLabel();
+});
+
+function updateThemeLabel() {
+    const isLight = document.body.classList.contains('light-mode');
+    if (currentLang === 'fr') {
+        themeLabel.textContent = isLight ? 'Clair' : 'Sombre';
+    } else {
+        themeLabel.textContent = isLight ? 'Light' : 'Dark';
+    }
+}
+
+// ===== LANGUAGE TOGGLE =====
+let currentLang = localStorage.getItem('lang') || 'en';
+const langToggle = document.getElementById('lang-toggle');
+
+const typingTextsEN = [
     'Cybersecurity Engineering Student',
     'Malware Analyst',
     'Threat Intelligence Enthusiast',
@@ -48,6 +75,66 @@ const typingTexts = [
     'Top 5% TryHackMe'
 ];
 
+const typingTextsFR = [
+    'Etudiant Ingenieur en Cybersecurite',
+    'Analyste Malware',
+    'Passione de Threat Intelligence',
+    'Tests de Penetration',
+    'Constructeur de Pipelines SAST',
+    'Top 5% TryHackMe'
+];
+
+let typingTexts = currentLang === 'fr' ? typingTextsFR : typingTextsEN;
+
+function applyLang(lang) {
+    currentLang = lang;
+    localStorage.setItem('lang', lang);
+    document.documentElement.lang = lang;
+
+    // Update all elements with data-en / data-fr
+    document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+        const text = el.getAttribute('data-' + lang);
+        if (text) {
+            if (el.tagName === 'PRE' || el.children.length === 0) {
+                el.innerHTML = text;
+            } else {
+                el.innerHTML = text;
+            }
+        }
+    });
+
+    // Update typing texts
+    typingTexts = lang === 'fr' ? typingTextsFR : typingTextsEN;
+    textIndex = 0;
+    charIndex = 0;
+    isDeleting = false;
+
+    // Update lang toggle active state
+    document.querySelectorAll('.lang-option').forEach(opt => {
+        opt.classList.toggle('active', opt.dataset.lang === lang);
+    });
+
+    // Update theme label
+    updateThemeLabel();
+
+    // Update page title
+    document.title = lang === 'fr'
+        ? 'Adam Njeh | Ingenieur Cybersecurite'
+        : 'Adam Njeh | Cybersecurity Engineer';
+}
+
+// Apply stored lang on load
+if (currentLang !== 'en') {
+    applyLang(currentLang);
+}
+updateThemeLabel();
+
+langToggle.addEventListener('click', () => {
+    const newLang = currentLang === 'en' ? 'fr' : 'en';
+    applyLang(newLang);
+});
+
+// ===== TYPING EFFECT =====
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -143,7 +230,6 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Add fade-in to elements
 document.querySelectorAll('.skill-category, .project-card, .timeline-item, .edu-card, .badge-card, .about-card, .stat-item, .contact-link-card').forEach(el => {
     el.classList.add('fade-in');
     observer.observe(el);

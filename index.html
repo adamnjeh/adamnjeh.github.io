@@ -14,16 +14,35 @@
 
     <div class="scanline"></div>
 
+    <!-- FLOATING CONTROLS -->
+    <div class="floating-controls">
+        <button class="control-btn theme-toggle" id="theme-toggle" title="Toggle light/dark mode">
+            <div class="control-track">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <span class="control-thumb"></span>
+            </div>
+            <span class="control-label" data-en="Dark" data-fr="Sombre">Dark</span>
+        </button>
+        <button class="control-btn lang-toggle" id="lang-toggle" title="Switch language">
+            <div class="lang-switch">
+                <span class="lang-option active" data-lang="en">EN</span>
+                <span class="lang-divider">/</span>
+                <span class="lang-option" data-lang="fr">FR</span>
+            </div>
+        </button>
+    </div>
+
     <nav id="navbar">
-        <div class="nav-logo glitch" data-text="AΔM">AΔM</div>
         <ul class="nav-links">
-            <li><a href="#home" class="nav-link active">~/home</a></li>
-            <li><a href="#about" class="nav-link">~/about</a></li>
-            <li><a href="#skills" class="nav-link">~/skills</a></li>
-            <li><a href="#experience" class="nav-link">~/xp</a></li>
-            <li><a href="#projects" class="nav-link">~/projects</a></li>
-            <li><a href="#education" class="nav-link">~/edu</a></li>
-            <li><a href="#contact" class="nav-link">~/contact</a></li>
+            <li><a href="#home" class="nav-link active" data-en="~/home" data-fr="~/accueil">~/home</a></li>
+            <li><a href="#about" class="nav-link" data-en="~/about" data-fr="~/profil">~/about</a></li>
+            <li><a href="#skills" class="nav-link" data-en="~/skills" data-fr="~/competences">~/skills</a></li>
+            <li><a href="#projects" class="nav-link" data-en="~/projects" data-fr="~/projets">~/projects</a></li>
+            <li><a href="#education" class="nav-link" data-en="~/edu" data-fr="~/formation">~/edu</a></li>
+            <li><a href="#experience" class="nav-link" data-en="~/xp" data-fr="~/xp">~/xp</a></li>
+            <li><a href="#badges" class="nav-link" data-en="~/achievements" data-fr="~/succes">~/achievements</a></li>
+            <li><a href="#contact" class="nav-link" data-en="~/contact" data-fr="~/contact">~/contact</a></li>
         </ul>
         <div class="nav-hamburger" id="hamburger">
             <span></span><span></span><span></span>
@@ -46,13 +65,13 @@
                     <p class="terminal-line"><span class="prompt">$</span> cat role.txt</p>
                     <p class="hero-subtitle typing" id="typing-text"></p>
                     <p class="terminal-line"><span class="prompt">$</span> cat bio.txt</p>
-                    <p class="hero-bio">> Pirate of the digital seas, hunting vulns across the Grand Line!</p>
+                    <p class="hero-bio" data-en="> Pirate of the digital seas, hunting vulns across the Grand Line!" data-fr="> Pirate des mers numeriques, chasseur de vulns sur la Grand Line !">> Pirate of the digital seas, hunting vulns across the Grand Line!</p>
                     <p class="terminal-line"><span class="prompt">$</span> <span class="cursor">_</span></p>
                 </div>
             </div>
             <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary"><i class="fas fa-terminal"></i> View Projects</a>
-                <a href="#contact" class="btn btn-outline"><i class="fas fa-satellite-dish"></i> Contact Me</a>
+                <a href="#projects" class="btn btn-primary"><i class="fas fa-terminal"></i> <span data-en="View Projects" data-fr="Voir les projets">View Projects</span></a>
+                <a href="#contact" class="btn btn-outline"><i class="fas fa-satellite-dish"></i> <span data-en="Contact Me" data-fr="Me contacter">Contact Me</span></a>
             </div>
             <div class="hero-badges">
                 <div class="badge"><i class="fas fa-shield-halved"></i> Top 5% TryHackMe</div>
@@ -62,14 +81,14 @@
         </div>
         <div class="scroll-indicator">
             <div class="mouse"></div>
-            <p>scroll_down</p>
+            <p data-en="scroll_down" data-fr="defiler_vers_le_bas">scroll_down</p>
         </div>
     </section>
 
     <!-- ABOUT -->
     <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title"><span class="title-bracket">[</span> About Me <span class="title-bracket">]</span></h2>
+            <h2 class="section-title"><span class="title-bracket">[</span> <span data-en="About Me" data-fr="A Propos">About Me</span> <span class="title-bracket">]</span></h2>
             <div class="about-grid">
                 <div class="about-avatar">
                     <div class="avatar-frame">
@@ -77,18 +96,18 @@
                         <div class="avatar-glitch"></div>
                     </div>
                     <div class="avatar-status">
-                        <span class="status-dot"></span> Available for alternance
+                        <span class="status-dot"></span> <span data-en="Available for alternance" data-fr="Disponible en alternance">Available for alternance</span>
                     </div>
                 </div>
                 <div class="about-text">
                     <div class="about-card">
-                        <p>Engineering student at <span class="highlight">Telecom SudParis</span>, specializing in systems security, network defense, and threat analysis. My hands-on experience spans <span class="highlight">static binary analysis</span> (PE headers, entropy, IOC), <span class="highlight">SAST pipelines</span> (taint analysis, CWE detection), and <span class="highlight">threat intelligence</span> (darkweb scraping, ransomware tracking).</p>
-                        <p>International background: Tunisia to France, ranked <span class="highlight">top 5% on TryHackMe</span>. Passionate about offensive security, malware analysis, and building tools that make the digital world safer.</p>
+                        <p data-en="Engineering student at <span class='highlight'>Telecom SudParis</span>, specializing in systems security, network defense, and threat analysis. My hands-on experience spans <span class='highlight'>static binary analysis</span> (PE headers, entropy, IOC), <span class='highlight'>SAST pipelines</span> (taint analysis, CWE detection), and <span class='highlight'>threat intelligence</span> (darkweb scraping, ransomware tracking)." data-fr="Etudiant ingenieur a <span class='highlight'>Telecom SudParis</span>, specialise en securite des systemes, defense reseau et analyse de menaces. Mon experience pratique couvre l'<span class='highlight'>analyse statique de binaires</span> (en-tetes PE, entropie, IOC), les <span class='highlight'>pipelines SAST</span> (taint analysis, detection CWE) et le <span class='highlight'>renseignement sur les menaces</span> (scraping darkweb, suivi de ransomware).">Engineering student at <span class="highlight">Telecom SudParis</span>, specializing in systems security, network defense, and threat analysis. My hands-on experience spans <span class="highlight">static binary analysis</span> (PE headers, entropy, IOC), <span class="highlight">SAST pipelines</span> (taint analysis, CWE detection), and <span class="highlight">threat intelligence</span> (darkweb scraping, ransomware tracking).</p>
+                        <p data-en="International background: Tunisia to France, ranked <span class='highlight'>top 5% on TryHackMe</span>. Passionate about offensive security, malware analysis, and building tools that make the digital world safer." data-fr="Parcours international : de la Tunisie a la France, classe <span class='highlight'>top 5% sur TryHackMe</span>. Passionne par la securite offensive, l'analyse de malware et la creation d'outils pour un monde numerique plus sur.">International background: Tunisia to France, ranked <span class="highlight">top 5% on TryHackMe</span>. Passionate about offensive security, malware analysis, and building tools that make the digital world safer.</p>
                     </div>
                     <div class="about-stats">
                         <div class="stat-item">
                             <span class="stat-number" data-target="9">0</span>
-                            <span class="stat-label">GitHub Repos</span>
+                            <span class="stat-label" data-en="GitHub Repos" data-fr="Repos GitHub">GitHub Repos</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number" data-target="5">0</span>
@@ -96,11 +115,11 @@
                         </div>
                         <div class="stat-item">
                             <span class="stat-number" data-target="920">0</span>
-                            <span class="stat-label">TOEIC Score</span>
+                            <span class="stat-label" data-en="TOEIC Score" data-fr="Score TOEIC">TOEIC Score</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number" data-target="3">0</span>
-                            <span class="stat-label">Languages</span>
+                            <span class="stat-label" data-en="Languages" data-fr="Langues">Languages</span>
                         </div>
                     </div>
                 </div>
@@ -111,11 +130,11 @@
     <!-- SKILLS -->
     <section id="skills" class="section section-alt">
         <div class="container">
-            <h2 class="section-title"><span class="title-bracket">[</span> Skills <span class="title-bracket">]</span></h2>
+            <h2 class="section-title"><span class="title-bracket">[</span> <span data-en="Skills" data-fr="Competences">Skills</span> <span class="title-bracket">]</span></h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <div class="skill-icon"><i class="fas fa-code"></i></div>
-                    <h3>Languages</h3>
+                    <h3 data-en="Languages" data-fr="Langages">Languages</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">C++</span>
@@ -125,28 +144,28 @@
                 </div>
                 <div class="skill-category">
                     <div class="skill-icon"><i class="fas fa-bug"></i></div>
-                    <h3>Threat Analysis & OSINT</h3>
+                    <h3 data-en="Threat Analysis & OSINT" data-fr="Analyse de menaces & OSINT">Threat Analysis & OSINT</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">VirusTotal API</span>
-                        <span class="skill-tag">PE Parsing</span>
-                        <span class="skill-tag">Entropy Analysis</span>
+                        <span class="skill-tag" data-en="PE Parsing" data-fr="Parsing PE">PE Parsing</span>
+                        <span class="skill-tag" data-en="Entropy Analysis" data-fr="Analyse d'entropie">Entropy Analysis</span>
                         <span class="skill-tag">Magic Bytes</span>
                         <span class="skill-tag">Web Scraping</span>
                     </div>
                 </div>
                 <div class="skill-category">
                     <div class="skill-icon"><i class="fas fa-shield-halved"></i></div>
-                    <h3>AppSec & SAST</h3>
+                    <h3 data-en="AppSec & SAST" data-fr="Securite applicative & SAST">AppSec & SAST</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Taint Analysis</span>
                         <span class="skill-tag">Semgrep</span>
-                        <span class="skill-tag">YARA Rules</span>
+                        <span class="skill-tag" data-en="YARA Rules" data-fr="Regles YARA">YARA Rules</span>
                         <span class="skill-tag">Burp Suite</span>
                     </div>
                 </div>
                 <div class="skill-category">
                     <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
-                    <h3>Network & Pentest</h3>
+                    <h3 data-en="Network & Pentest" data-fr="Reseau & Pentest">Network & Pentest</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Wireshark</span>
                         <span class="skill-tag">Nmap</span>
@@ -157,27 +176,151 @@
         </div>
     </section>
 
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title"><span class="title-bracket">[</span> <span data-en="Projects" data-fr="Projets">Projects</span> <span class="title-bracket">]</span></h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <i class="fas fa-skull-crossbones project-icon"></i>
+                        <a href="https://github.com/adamnjeh" target="_blank" class="project-github-btn"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                    <h3 class="project-title" data-en="Threat Intel - Ransomware Tracker" data-fr="Threat Intel - Suivi Ransomware">Threat Intel - Ransomware Tracker</h3>
+                    <p class="project-desc" data-en="Automated darkweb (.onion) scraping to collect ransomware compromise announcements. Structured data into analytical database: victim, gang, date, ransom amount, stolen data type, Bitcoin address, attack strategy." data-fr="Scraping automatise du darkweb (.onion) pour collecter les annonces de compromission par des groupes ransomware. Structuration des donnees en base analytique : victime, gang, date, montant de rancon, type de donnees volees, adresse Bitcoin, strategie d'attaque.">Automated darkweb (.onion) scraping to collect ransomware compromise announcements. Structured data into analytical database: victim, gang, date, ransom amount, stolen data type, Bitcoin address, attack strategy.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Tor</span>
+                        <span class="tag">OSINT</span>
+                        <span class="tag">Darkweb</span>
+                    </div>
+                    <div class="project-date" data-en="Feb 2026 - May 2026 | Telecom SudParis" data-fr="Fev 2026 - Mai 2026 | Telecom SudParis">Feb 2026 - May 2026 | Telecom SudParis</div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <i class="fas fa-microchip project-icon"></i>
+                        <a href="https://github.com/adamnjeh/enhanced-miniJAVA-compiler" target="_blank" class="project-github-btn"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                    <h3 class="project-title" data-en="MiniJava Compiler + SAST Extension" data-fr="Compilateur MiniJava + Extension SAST">MiniJava Compiler + SAST Extension</h3>
+                    <p class="project-desc" data-en="Full MiniJava compiler (lexical, syntactic, semantic analysis, IR & MIPS generation). Extended with a two-pass SAST pipeline: taint analysis (CWE-89/77/79), pattern detector (CWE-190/835), Semgrep/YARA rule engine, MIPS hardening, and grammar fuzzer." data-fr="Compilateur complet MiniJava (analyse lexicale, syntaxique, semantique, generation IR & MIPS). Extension avec pipeline SAST en deux passes : taint analysis (CWE-89/77/79), detecteur de patterns (CWE-190/835), moteur de regles Semgrep/YARA, hardening MIPS et fuzzer grammatical.">Full MiniJava compiler (lexical, syntactic, semantic analysis, IR & MIPS generation). Extended with a two-pass SAST pipeline: taint analysis (CWE-89/77/79), pattern detector (CWE-190/835), Semgrep/YARA rule engine, MIPS hardening, and grammar fuzzer.</p>
+                    <div class="project-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">SAST</span>
+                        <span class="tag" data-en="Compiler" data-fr="Compilateur">Compiler</span>
+                        <span class="tag" data-en="Security" data-fr="Securite">Security</span>
+                    </div>
+                    <div class="project-date" data-en="Dec 2025 - Mar 2026 | Telecom SudParis" data-fr="Dec 2025 - Mars 2026 | Telecom SudParis">Dec 2025 - Mar 2026 | Telecom SudParis</div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <i class="fas fa-globe project-icon"></i>
+                        <a href="https://github.com/adamnjeh" target="_blank" class="project-github-btn"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                    <h3 class="project-title" data-en="KaizoKage - Collection Management App" data-fr="KaizoKage - Gestion de collection">KaizoKage - Collection Management App</h3>
+                    <p class="project-desc" data-en="Full-stack web application with authentication, role management (ROLE_USER / ROLE_ADMIN), owner-based access control, and CSRF protection." data-fr="Application web full-stack avec authentification, gestion des roles (ROLE_USER / ROLE_ADMIN), controle d'acces par proprietaire et protection CSRF.">Full-stack web application with authentication, role management (ROLE_USER / ROLE_ADMIN), owner-based access control, and CSRF protection.</p>
+                    <div class="project-tags">
+                        <span class="tag">PHP</span>
+                        <span class="tag">Symfony</span>
+                        <span class="tag">Auth</span>
+                        <span class="tag">RBAC</span>
+                    </div>
+                    <div class="project-date" data-en="Sep 2025 - Dec 2025 | Telecom SudParis" data-fr="Sep 2025 - Dec 2025 | Telecom SudParis">Sep 2025 - Dec 2025 | Telecom SudParis</div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <i class="fas fa-virus project-icon"></i>
+                        <a href="https://github.com/adamnjeh/Malware_Analysis" target="_blank" class="project-github-btn"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                    <h3 class="project-title" data-en="Malware Analysis" data-fr="Analyse de Malware">Malware Analysis</h3>
+                    <p class="project-desc" data-en="Python-based malware analysis toolkit for static examination of suspicious files and binaries." data-fr="Boite a outils Python pour l'analyse statique de fichiers et binaires suspects.">Python-based malware analysis toolkit for static examination of suspicious files and binaries.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Malware</span>
+                        <span class="tag" data-en="Analysis" data-fr="Analyse">Analysis</span>
+                    </div>
+                    <div class="project-date" data-en="GitHub Repository" data-fr="Depot GitHub">GitHub Repository</div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <i class="fas fa-flag project-icon"></i>
+                        <a href="https://github.com/adamnjeh/Overthewire-Writeups" target="_blank" class="project-github-btn"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                    <h3 class="project-title" data-en="OverTheWire Writeups" data-fr="Writeups OverTheWire">OverTheWire Writeups</h3>
+                    <p class="project-desc" data-en="Detailed writeups and solutions for OverTheWire security wargames, documenting methodologies and techniques." data-fr="Writeups detailles et solutions pour les wargames de securite OverTheWire, documentant les methodologies et techniques.">Detailed writeups and solutions for OverTheWire security wargames, documenting methodologies and techniques.</p>
+                    <div class="project-tags">
+                        <span class="tag">CTF</span>
+                        <span class="tag">Wargames</span>
+                        <span class="tag" data-en="Security" data-fr="Securite">Security</span>
+                    </div>
+                    <div class="project-date" data-en="GitHub Repository" data-fr="Depot GitHub">GitHub Repository</div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <i class="fas fa-gamepad project-icon"></i>
+                        <a href="https://github.com/adamnjeh/Tetris-Unity" target="_blank" class="project-github-btn"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                    <h3 class="project-title">Tetris - Unity</h3>
+                    <p class="project-desc" data-en="Classic Tetris game built with Unity engine, showcasing game development skills and C# programming." data-fr="Jeu Tetris classique developpe avec le moteur Unity, mettant en avant le developpement de jeux et la programmation C#.">Classic Tetris game built with Unity engine, showcasing game development skills and C# programming.</p>
+                    <div class="project-tags">
+                        <span class="tag">C#</span>
+                        <span class="tag">Unity</span>
+                        <span class="tag" data-en="Game Dev" data-fr="Jeu Video">Game Dev</span>
+                    </div>
+                    <div class="project-date" data-en="GitHub Repository" data-fr="Depot GitHub">GitHub Repository</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title"><span class="title-bracket">[</span> <span data-en="Education" data-fr="Formation">Education</span> <span class="title-bracket">]</span></h2>
+            <div class="education-grid">
+                <div class="edu-card">
+                    <div class="edu-icon"><i class="fas fa-university"></i></div>
+                    <h3>Telecom SudParis</h3>
+                    <p class="edu-degree" data-en="Engineering Degree - Computer Science & Digital Systems" data-fr="Diplome d'ingenieur - Informatique et systemes du numerique">Engineering Degree - Computer Science & Digital Systems</p>
+                    <p class="edu-date" data-en="2025 - 2027 | Ile-de-France, France" data-fr="2025 - 2027 | Ile-de-France, France">2025 - 2027 | Ile-de-France, France</p>
+                    <p class="edu-detail" data-en="System design, networks, software development with application security focus." data-fr="Conception systeme, reseaux et developpement logiciel avec orientation securite applicative.">System design, networks, software development with application security focus.</p>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-icon"><i class="fas fa-satellite-dish"></i></div>
+                    <h3>Sup'Com - Tunis</h3>
+                    <p class="edu-degree" data-en="Engineering Cycle - ICT" data-fr="Cycle ingenieur - TIC">Engineering Cycle - ICT</p>
+                    <p class="edu-date" data-en="2023 - 2025 | Ariana, Tunis, Tunisia" data-fr="2023 - 2025 | Ariana, Tunis, Tunisie">2023 - 2025 | Ariana, Tunis, Tunisia</p>
+                    <p class="edu-detail" data-en="Networks & telecommunications, software development with network security orientation." data-fr="Reseaux & telecommunications, developpement logiciel avec orientation securite reseau.">Networks & telecommunications, software development with network security orientation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- EXPERIENCE -->
     <section id="experience" class="section">
         <div class="container">
-            <h2 class="section-title"><span class="title-bracket">[</span> Experience <span class="title-bracket">]</span></h2>
+            <h2 class="section-title"><span class="title-bracket">[</span> <span data-en="Experience" data-fr="Experience">Experience</span> <span class="title-bracket">]</span></h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <h3>Cybersecurity Intern</h3>
+                            <h3 data-en="Cybersecurity Intern" data-fr="Stagiaire Cybersecurite">Cybersecurity Intern</h3>
                             <span class="timeline-company">CyberFort Tech.</span>
-                            <span class="timeline-date">Jul 2025 - Aug 2025 | Remote, India</span>
+                            <span class="timeline-date" data-en="Jul 2025 - Aug 2025 | Remote, India" data-fr="Juil. 2025 - Aout 2025 | Remote, Inde">Jul 2025 - Aug 2025 | Remote, India</span>
                         </div>
                         <ul class="timeline-details">
-                            <li>Built a Python CLI tool for static file analysis: hash computation, VirusTotal API comparison, suspicious string extraction, PE import analysis, and magic byte detection.</li>
-                            <li>Implemented per-section entropy calculation for packing/encryption detection, completing a full IOC classification pipeline without execution.</li>
+                            <li data-en="Built a Python CLI tool for static file analysis: hash computation, VirusTotal API comparison, suspicious string extraction, PE import analysis, and magic byte detection." data-fr="Developpement d'un outil CLI Python d'analyse statique de fichiers : calcul de hash, comparaison via l'API VirusTotal, extraction de chaines suspectes, analyse des imports PE et detection de magic bytes.">Built a Python CLI tool for static file analysis: hash computation, VirusTotal API comparison, suspicious string extraction, PE import analysis, and magic byte detection.</li>
+                            <li data-en="Implemented per-section entropy calculation for packing/encryption detection, completing a full IOC classification pipeline without execution." data-fr="Calcul d'entropie par section pour la detection de packing/chiffrement, consolidant une pipeline complete de classification d'IOC sans execution.">Implemented per-section entropy calculation for packing/encryption detection, completing a full IOC classification pipeline without execution.</li>
                         </ul>
                         <div class="timeline-tags">
                             <span class="tag">Python</span>
                             <span class="tag">VirusTotal</span>
-                            <span class="tag">PE Analysis</span>
+                            <span class="tag" data-en="PE Analysis" data-fr="Analyse PE">PE Analysis</span>
                             <span class="tag">Malware</span>
                         </div>
                     </div>
@@ -186,16 +329,16 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <h3>Observation Intern</h3>
+                            <h3 data-en="Observation Intern" data-fr="Stagiaire d'observation">Observation Intern</h3>
                             <span class="timeline-company">Tunisie Telecom</span>
-                            <span class="timeline-date">Jul 2024 - Aug 2024 | Sfax, Tunisia</span>
+                            <span class="timeline-date" data-en="Jul 2024 - Aug 2024 | Sfax, Tunisia" data-fr="Juil. 2024 - Aout 2024 | Sfax, Tunisie">Jul 2024 - Aug 2024 | Sfax, Tunisia</span>
                         </div>
                         <ul class="timeline-details">
-                            <li>Observed regional network infrastructure of a national operator: equipment, fiber optics, and network security practices in a real-world operator environment.</li>
+                            <li data-en="Observed regional network infrastructure of a national operator: equipment, fiber optics, and network security practices in a real-world operator environment." data-fr="Observation de l'infrastructure reseau regionale d'un operateur national : equipements, fibre optique et pratiques de securite reseau en environnement operateur reel.">Observed regional network infrastructure of a national operator: equipment, fiber optics, and network security practices in a real-world operator environment.</li>
                         </ul>
                         <div class="timeline-tags">
-                            <span class="tag">Network Infrastructure</span>
-                            <span class="tag">Fiber Optics</span>
+                            <span class="tag" data-en="Network Infrastructure" data-fr="Infrastructure Reseau">Network Infrastructure</span>
+                            <span class="tag" data-en="Fiber Optics" data-fr="Fibre Optique">Fiber Optics</span>
                             <span class="tag">Telecom</span>
                         </div>
                     </div>
@@ -204,151 +347,15 @@
         </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section section-alt">
-        <div class="container">
-            <h2 class="section-title"><span class="title-bracket">[</span> Projects <span class="title-bracket">]</span></h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-card-header">
-                        <i class="fas fa-skull-crossbones project-icon"></i>
-                        <div class="project-links">
-                            <a href="https://github.com/adamnjeh" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Threat Intel - Ransomware Tracker</h3>
-                    <p class="project-desc">Automated darkweb (.onion) scraping to collect ransomware compromise announcements. Structured data into analytical database: victim, gang, date, ransom amount, stolen data type, Bitcoin address, attack strategy.</p>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Tor</span>
-                        <span class="tag">OSINT</span>
-                        <span class="tag">Darkweb</span>
-                    </div>
-                    <div class="project-date">Feb 2026 - May 2026 | Telecom SudParis</div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-card-header">
-                        <i class="fas fa-microchip project-icon"></i>
-                        <div class="project-links">
-                            <a href="https://github.com/adamnjeh/enhanced-miniJAVA-compiler" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">MiniJava Compiler + SAST Extension</h3>
-                    <p class="project-desc">Full MiniJava compiler (lexical, syntactic, semantic analysis, IR & MIPS generation). Extended with a two-pass SAST pipeline: taint analysis (CWE-89/77/79), pattern detector (CWE-190/835), Semgrep/YARA rule engine, MIPS hardening, and grammar fuzzer.</p>
-                    <div class="project-tags">
-                        <span class="tag">Java</span>
-                        <span class="tag">SAST</span>
-                        <span class="tag">Compiler</span>
-                        <span class="tag">Security</span>
-                    </div>
-                    <div class="project-date">Dec 2025 - Mar 2026 | Telecom SudParis</div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-card-header">
-                        <i class="fas fa-globe project-icon"></i>
-                        <div class="project-links">
-                            <a href="https://github.com/adamnjeh" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">KaizoKage - Collection Management App</h3>
-                    <p class="project-desc">Full-stack web application with authentication, role management (ROLE_USER / ROLE_ADMIN), owner-based access control, and CSRF protection.</p>
-                    <div class="project-tags">
-                        <span class="tag">PHP</span>
-                        <span class="tag">Symfony</span>
-                        <span class="tag">Auth</span>
-                        <span class="tag">RBAC</span>
-                    </div>
-                    <div class="project-date">Sep 2025 - Dec 2025 | Telecom SudParis</div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-card-header">
-                        <i class="fas fa-virus project-icon"></i>
-                        <div class="project-links">
-                            <a href="https://github.com/adamnjeh/Malware_Analysis" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Malware Analysis</h3>
-                    <p class="project-desc">Python-based malware analysis toolkit for static examination of suspicious files and binaries.</p>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Malware</span>
-                        <span class="tag">Analysis</span>
-                    </div>
-                    <div class="project-date">GitHub Repository</div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-card-header">
-                        <i class="fas fa-flag project-icon"></i>
-                        <div class="project-links">
-                            <a href="https://github.com/adamnjeh/Overthewire-Writeups" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">OverTheWire Writeups</h3>
-                    <p class="project-desc">Detailed writeups and solutions for OverTheWire security wargames, documenting methodologies and techniques.</p>
-                    <div class="project-tags">
-                        <span class="tag">CTF</span>
-                        <span class="tag">Wargames</span>
-                        <span class="tag">Security</span>
-                    </div>
-                    <div class="project-date">GitHub Repository</div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-card-header">
-                        <i class="fas fa-gamepad project-icon"></i>
-                        <div class="project-links">
-                            <a href="https://github.com/adamnjeh/Tetris-Unity" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Tetris - Unity</h3>
-                    <p class="project-desc">Classic Tetris game built with Unity engine, showcasing game development skills and C# programming.</p>
-                    <div class="project-tags">
-                        <span class="tag">C#</span>
-                        <span class="tag">Unity</span>
-                        <span class="tag">Game Dev</span>
-                    </div>
-                    <div class="project-date">GitHub Repository</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section id="education" class="section">
-        <div class="container">
-            <h2 class="section-title"><span class="title-bracket">[</span> Education <span class="title-bracket">]</span></h2>
-            <div class="education-grid">
-                <div class="edu-card">
-                    <div class="edu-icon"><i class="fas fa-university"></i></div>
-                    <h3>Telecom SudParis</h3>
-                    <p class="edu-degree">Engineering Degree - Computer Science & Digital Systems</p>
-                    <p class="edu-date">2025 - 2027 | Ile-de-France, France</p>
-                    <p class="edu-detail">System design, networks, software development with application security focus.</p>
-                </div>
-                <div class="edu-card">
-                    <div class="edu-icon"><i class="fas fa-satellite-dish"></i></div>
-                    <h3>Sup'Com - Tunis</h3>
-                    <p class="edu-degree">Engineering Cycle - ICT</p>
-                    <p class="edu-date">2023 - 2025 | Ariana, Tunis, Tunisia</p>
-                    <p class="edu-detail">Networks & telecommunications, software development with network security orientation.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CERTIFICATIONS / BADGES -->
+    <!-- ACHIEVEMENTS -->
     <section id="badges" class="section section-alt">
         <div class="container">
-            <h2 class="section-title"><span class="title-bracket">[</span> Achievements <span class="title-bracket">]</span></h2>
+            <h2 class="section-title"><span class="title-bracket">[</span> <span data-en="Achievements" data-fr="Succes">Achievements</span> <span class="title-bracket">]</span></h2>
             <div class="badges-grid">
                 <div class="badge-card">
                     <i class="fas fa-crosshairs badge-icon"></i>
                     <h4>TryHackMe Top 5%</h4>
-                    <p>Global ranking</p>
+                    <p data-en="Global ranking" data-fr="Classement mondial">Global ranking</p>
                 </div>
                 <div class="badge-card">
                     <i class="fas fa-magnifying-glass badge-icon"></i>
@@ -358,12 +365,12 @@
                 <div class="badge-card">
                     <i class="fas fa-network-wired badge-icon"></i>
                     <h4>Wireshark</h4>
-                    <p>Network Analysis - Top 4%</p>
+                    <p data-en="Network Analysis - Top 4%" data-fr="Analyse Reseau - Top 4%">Network Analysis - Top 4%</p>
                 </div>
                 <div class="badge-card">
                     <i class="fas fa-ethernet badge-icon"></i>
                     <h4>Networking Nerd</h4>
-                    <p>TryHackMe Badge</p>
+                    <p data-en="TryHackMe Badge" data-fr="Badge TryHackMe">TryHackMe Badge</p>
                 </div>
                 <div class="badge-card">
                     <i class="fas fa-user-shield badge-icon"></i>
@@ -373,7 +380,7 @@
                 <div class="badge-card">
                     <i class="fas fa-code-pull-request badge-icon"></i>
                     <h4>Pull Shark</h4>
-                    <p>GitHub Achievement</p>
+                    <p data-en="GitHub Achievement" data-fr="Succes GitHub">GitHub Achievement</p>
                 </div>
             </div>
         </div>
@@ -393,7 +400,17 @@
                     </div>
                     <div class="terminal-body">
                         <p class="terminal-line"><span class="prompt">$</span> cat contact_info.json</p>
-                        <pre class="contact-json">{
+                        <pre class="contact-json" id="contact-json" data-en='{
+  "email": "njehadam.an@gmail.com",
+  "phone": "+33 7 46 51 89 44",
+  "location": "Ile-de-France, France",
+  "status": "Seeking 1-year cybersecurity alternance"
+}' data-fr='{
+  "email": "njehadam.an@gmail.com",
+  "telephone": "+33 7 46 51 89 44",
+  "localisation": "Ile-de-France, France",
+  "statut": "Recherche alternance cybersecurite 1 an"
+}'>{
   "email": "njehadam.an@gmail.com",
   "phone": "+33 7 46 51 89 44",
   "location": "Ile-de-France, France",
@@ -424,7 +441,7 @@
 
     <footer>
         <div class="container">
-            <p class="footer-text">&copy; 2026 Adam Njeh | Built with <span class="highlight">&lt;/code&gt;</span> and <span class="highlight">caffeine</span></p>
+            <p class="footer-text" data-en="&copy; 2026 Adam Njeh | Built with <span class='highlight'>&lt;/code&gt;</span> and <span class='highlight'>caffeine</span>" data-fr="&copy; 2026 Adam Njeh | Construit avec <span class='highlight'>&lt;/code&gt;</span> et <span class='highlight'>cafeine</span>">&copy; 2026 Adam Njeh | Built with <span class="highlight">&lt;/code&gt;</span> and <span class="highlight">caffeine</span></p>
             <div class="footer-links">
                 <a href="https://github.com/adamnjeh" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://linkedin.com/in/Adam-Njeh" target="_blank"><i class="fab fa-linkedin"></i></a>
