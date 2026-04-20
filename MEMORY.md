@@ -1,0 +1,2 @@
+- [User Profile](user_profile.md) — Adam Njeh, cybersec student, portfolio site owner
+- [Portfolio Project](project_portfolio.md) — Cyber-themed portfolio, GitHub Pages deployment, evolving with GitHub repos
